@@ -4,9 +4,29 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
-<body>
+<body onload="__onLoad__()" >
+	<h1 id="__title__"></h1>
+	<h2 id="__artist__"></h2>
+	<h3 id="__genre__"></h3>
+	<h4 id="__desc__"></h4>
+	<img id="__image__"></img>
 
+	<div id="buttons">
+		<div class="button play" onclick="Player.play()">Pause</div>
+		<div class="button" onclick="Player.next()">Next</div>
+		<div class="button" onclick="Player.previous()">Previous</div>
+		<div class="button" onclick="Player.pickTrack()">Pick Track</div>
+	</div>
 
+	<div id="myModal" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+	    <span class="close">&times;</span>
+	  	<p id="list">Some text in the Modal..</p>
+	  </div>
+
+	</div>
 
 	<script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
 	<script type="text/javascript" src="index.js"></script>
